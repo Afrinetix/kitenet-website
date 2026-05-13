@@ -31,26 +31,33 @@
 
   <!-- ===== HERO ===== -->
   <section class="hero" id="home">
-    <div class="hero-bg-shapes">
-      <div class="shape shape-1"></div>
-      <div class="shape shape-2"></div>
-      <div class="shape shape-3"></div>
-    </div>
-    <div class="container hero-inner">
-      <div class="hero-text" data-animate>
+
+    <!-- Subtle background orbs -->
+    <div class="hero-orb orb-1"></div>
+    <div class="hero-orb orb-2"></div>
+    <div class="hero-orb orb-3"></div>
+
+    <!-- Split-screen inner -->
+    <div class="hero-split">
+
+      <!-- ── LEFT HALF: text ── -->
+      <div class="hero-left" data-animate>
         <div class="hero-badge">
-          <i class="fa-solid fa-wifi"></i> Free Installation Available
+          <span class="badge-dot"></span> Free Installation Available
         </div>
         <h1 class="hero-title">
-          Smart Internet<br/>
+          Smart Internet<br>
           <span class="gradient-text">For Smart Living</span>
         </h1>
-        <p class="hero-sub">Reliable, fast, and affordable home internet starting at just <strong>Ksh 1,000/mo</strong>. Connect your family to what matters most.</p>
+        <p class="hero-sub">
+          Reliable, fast &amp; affordable home internet starting at just
+          <strong>Ksh 1,000/mo</strong>. Connect your family to what matters most.
+        </p>
         <div class="hero-actions">
           <a href="#packages" class="btn btn-primary btn-lg">
             <i class="fa-solid fa-bolt"></i> View Packages
           </a>
-          <a href="https://wa.me/254740081118" target="_blank" class="btn btn-outline btn-lg">
+          <a href="https://wa.me/254740081118" target="_blank" class="btn btn-ghost btn-lg">
             <i class="fa-brands fa-whatsapp"></i> Chat With Us
           </a>
         </div>
@@ -60,122 +67,111 @@
           <div class="trust-item"><i class="fa-solid fa-check-circle"></i> 24/7 Support</div>
         </div>
       </div>
-      <div class="hero-visual" data-animate data-delay="200">
-        <div class="dashboard">
 
-          <!-- Main connection card -->
-          <div class="dash-card dash-main">
-            <div class="dash-header">
-              <div class="dash-title">
-                <span class="dash-dot"></span>
-                <span>Your Connection</span>
-              </div>
-              <span class="dash-plan-tag">20 Mbps</span>
+      <!-- ── RIGHT HALF: floating cards ── -->
+      <div class="hero-right" data-animate data-delay="200">
+
+        <!-- Card 1 — Connection status (main) -->
+        <div class="hcard hcard-main">
+          <div class="hcard-header">
+            <div class="hcard-live">
+              <span class="live-dot"></span>
+              <span>Live Connection</span>
             </div>
+            <span class="hcard-badge">20 Mbps</span>
+          </div>
 
-            <!-- Speed meter -->
-            <div class="speed-meter">
-              <div class="meter-arc">
-                <svg viewBox="0 0 160 100" class="meter-svg">
-                  <path d="M 20 90 A 70 70 0 0 1 140 90" fill="none" stroke="rgba(255,255,255,.12)" stroke-width="10" stroke-linecap="round"/>
-                  <path d="M 20 90 A 70 70 0 0 1 140 90" fill="none" stroke="url(#speedGrad)" stroke-width="10" stroke-linecap="round" class="meter-fill" stroke-dasharray="220" stroke-dashoffset="55"/>
-                  <defs>
-                    <linearGradient id="speedGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stop-color="#22c55e"/>
-                      <stop offset="100%" stop-color="#f59e0b"/>
-                    </linearGradient>
-                  </defs>
-                </svg>
-                <div class="meter-value">
-                  <span class="meter-num" id="meterNum">20</span>
-                  <span class="meter-unit">Mbps</span>
-                  <span class="meter-label">Download Speed</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Upload / Ping -->
-            <div class="dash-stats-row">
-              <div class="dash-stat">
-                <i class="fa-solid fa-arrow-up"></i>
-                <div>
-                  <strong>5 Mbps</strong>
-                  <span>Upload</span>
-                </div>
-              </div>
-              <div class="dash-divider"></div>
-              <div class="dash-stat">
-                <i class="fa-solid fa-stopwatch"></i>
-                <div>
-                  <strong>12 ms</strong>
-                  <span>Ping</span>
-                </div>
-              </div>
-              <div class="dash-divider"></div>
-              <div class="dash-stat">
-                <i class="fa-solid fa-clock-rotate-left"></i>
-                <div>
-                  <strong>99.9%</strong>
-                  <span>Uptime</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Connected devices -->
-            <div class="devices-row">
-              <span class="devices-label">Connected Devices</span>
-              <div class="devices-list">
-                <div class="device-chip active"><i class="fa-solid fa-mobile-screen"></i><span>Phone</span></div>
-                <div class="device-chip active"><i class="fa-solid fa-laptop"></i><span>Laptop</span></div>
-                <div class="device-chip active"><i class="fa-solid fa-tv"></i><span>Smart TV</span></div>
-                <div class="device-chip"><i class="fa-solid fa-tablet-screen-button"></i><span>Tablet</span></div>
-              </div>
+          <div class="hcard-meter">
+            <svg viewBox="0 0 200 120" class="meter-svg">
+              <path d="M 24 108 A 84 84 0 0 1 176 108" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="12" stroke-linecap="round"/>
+              <path d="M 24 108 A 84 84 0 0 1 176 108" fill="none" stroke="url(#mGrad)" stroke-width="12" stroke-linecap="round" class="meter-fill" stroke-dasharray="264" stroke-dashoffset="264"/>
+              <defs>
+                <linearGradient id="mGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stop-color="#4ade80"/>
+                  <stop offset="100%" stop-color="#f59e0b"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="meter-center">
+              <span class="meter-num">20</span>
+              <span class="meter-unit">Mbps</span>
+              <span class="meter-lbl">Download</span>
             </div>
           </div>
 
-          <!-- Bottom row: two mini cards -->
-          <div class="dash-row">
-            <div class="dash-card dash-mini">
-              <div class="mini-icon"><i class="fa-solid fa-tag"></i></div>
-              <div class="mini-text">
-                <strong>From Ksh 1,000</strong>
-                <span>per month only</span>
-              </div>
+          <div class="hcard-stats">
+            <div class="hstat">
+              <i class="fa-solid fa-arrow-up"></i>
+              <strong>5 Mbps</strong>
+              <span>Upload</span>
             </div>
-            <div class="dash-card dash-mini dash-mini-amber">
-              <div class="mini-icon amber"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-              <div class="mini-text">
-                <strong>Free Setup</strong>
-                <span>same-day install</span>
-              </div>
+            <div class="hstat-sep"></div>
+            <div class="hstat">
+              <i class="fa-solid fa-stopwatch"></i>
+              <strong>12 ms</strong>
+              <span>Ping</span>
+            </div>
+            <div class="hstat-sep"></div>
+            <div class="hstat">
+              <i class="fa-solid fa-circle-check"></i>
+              <strong>99.9%</strong>
+              <span>Uptime</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom row -->
+        <div class="hcard-row">
+
+          <!-- Card 2 — Devices -->
+          <div class="hcard hcard-sm hcard-devices">
+            <p class="hcard-sm-label">Connected Devices</p>
+            <div class="device-chips">
+              <span class="dchip on"><i class="fa-solid fa-mobile-screen"></i> Phone</span>
+              <span class="dchip on"><i class="fa-solid fa-laptop"></i> Laptop</span>
+              <span class="dchip on"><i class="fa-solid fa-tv"></i> TV</span>
+              <span class="dchip"><i class="fa-solid fa-tablet-screen-button"></i> Tablet</span>
             </div>
           </div>
 
-          <!-- Packages ticker -->
-          <div class="dash-card dash-ticker">
-            <span class="ticker-label">Plans:</span>
-            <div class="ticker-track">
-              <div class="ticker-inner" id="ticker">
-                <span>5 Mbps <em>— Ksh 1,000</em></span>
-                <span>10 Mbps <em>— Ksh 1,500</em></span>
-                <span>15 Mbps <em>— Ksh 2,000</em></span>
-                <span>20 Mbps <em>— Ksh 2,500</em></span>
-                <span>5 Mbps <em>— Ksh 1,000</em></span>
-                <span>10 Mbps <em>— Ksh 1,500</em></span>
-                <span>15 Mbps <em>— Ksh 2,000</em></span>
-                <span>20 Mbps <em>— Ksh 2,500</em></span>
-              </div>
+          <!-- Card 3 — Pricing -->
+          <div class="hcard hcard-sm hcard-price">
+            <div class="price-icon"><i class="fa-solid fa-tag"></i></div>
+            <div>
+              <strong>From Ksh 1,000</strong>
+              <span>/month · Free setup</span>
             </div>
           </div>
 
         </div>
-      </div>
-    </div>
+
+        <!-- Card 4 — Ticker -->
+        <div class="hcard hcard-ticker">
+          <span class="ticker-lbl">Plans</span>
+          <div class="ticker-track">
+            <div class="ticker-inner">
+              <span>5 Mbps <em>— Ksh 1,000</em></span>
+              <span>10 Mbps <em>— Ksh 1,500</em></span>
+              <span>15 Mbps <em>— Ksh 2,000</em></span>
+              <span>20 Mbps <em>— Ksh 2,500</em></span>
+              <span>5 Mbps <em>— Ksh 1,000</em></span>
+              <span>10 Mbps <em>— Ksh 1,500</em></span>
+              <span>15 Mbps <em>— Ksh 2,000</em></span>
+              <span>20 Mbps <em>— Ksh 2,500</em></span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /hero-right -->
+    </div><!-- /hero-split -->
+
+    <!-- Full-width wave at the very bottom -->
     <div class="hero-wave">
-      <svg viewBox="0 0 1440 80" preserveAspectRatio="none">
-        <path d="M0,40 C360,80 1080,0 1440,40 L1440,80 L0,80 Z" fill="#f0fdf4"/>
+      <svg viewBox="0 0 1440 110" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0,70 C200,110 400,30 600,55 C800,80 1000,20 1200,50 C1320,65 1400,45 1440,40 L1440,110 L0,110 Z" fill="#f0fdf4"/>
       </svg>
     </div>
+
   </section>
 
   <!-- ===== PACKAGES ===== -->
