@@ -28,6 +28,12 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
 
+// Trigger speed meter arc animation on load
+setTimeout(() => {
+  const fill = document.querySelector('.meter-fill');
+  if (fill) fill.classList.add('animate');
+}, 800);
+
 // ===== COUNT-UP ANIMATION =====
 function animateCount(el) {
   const target = parseInt(el.dataset.count, 10);
