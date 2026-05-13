@@ -193,7 +193,10 @@ img { max-width: 100%; }
 .trust-item i { color: var(--amber); }
 
 /* ===== HERO DASHBOARD ===== */
-.hero-visual { display: flex; align-items: center; justify-content: stretch; }
+.hero-visual {
+  display: flex; align-items: center;
+  padding-right: 40px;   /* keeps dashboard away from the right screen edge */
+}
 
 .dashboard {
   width: 100%;
@@ -574,7 +577,7 @@ img { max-width: 100%; }
 
   .hero { padding-top: 100px; }
   .hero-inner { grid-template-columns: 1fr; gap: 40px; text-align: center; }
-  .hero-visual { order: -1; justify-content: center; }
+  .hero-visual { order: -1; justify-content: center; padding-right: 0; }
   .dashboard { max-width: 100%; }
   .hero-actions { justify-content: center; }
   .hero-trust { justify-content: center; }
