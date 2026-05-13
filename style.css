@@ -151,7 +151,7 @@ img { max-width: 100%; }
 .hero {
   position: relative;
   min-height: 100vh;
-  background: linear-gradient(140deg, #052e16 0%, #14532d 45%, #166534 100%);
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green) 50%, #15803d 100%);
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -162,9 +162,9 @@ img { max-width: 100%; }
   position: absolute; border-radius: 50%; pointer-events: none;
   filter: blur(80px); opacity: .25;
 }
-.orb-1 { width: 520px; height: 520px; background: #22c55e; top: -140px; right: -100px; }
-.orb-2 { width: 340px; height: 340px; background: #f59e0b; bottom: 60px;  left: -100px; opacity: .12; }
-.orb-3 { width: 200px; height: 200px; background: #4ade80; top: 50%;    right: 30%;  opacity: .18; }
+.orb-1 { width: 520px; height: 520px; background: #166534; top: -140px; right: -100px; }
+.orb-2 { width: 340px; height: 340px; background: #f59e0b; bottom: 60px; left: -100px; opacity: .10; }
+.orb-3 { width: 200px; height: 200px; background: #16a34a; top: 50%;    right: 30%;  opacity: .15; }
 
 @keyframes floatY {
   0%,100% { transform: translateY(0); }
@@ -243,7 +243,7 @@ img { max-width: 100%; }
 
 /* ── RIGHT HALF ── */
 .hero-right {
-  padding: 0 48px 0 24px;      /* 24px gap from centre, 48px from right edge */
+  padding: 0 72px 0 24px;      /* 24px gap from centre, 72px margin from right edge */
   display: flex;
   flex-direction: column;
   gap: 12px;
